@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta http-equiv="X-UA-Compatible" content="ie=edge" />
+    <meta name="Description" content="Enter your description here" />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/4.6.0/css/bootstrap.min.css"
+    />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.2/css/all.min.css"
+    />
+    <link rel="stylesheet" href="assets/css/style.css" />
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.5.1/jquery.slim.min.js"></script>
+    <script src="script.js"></script>
+    <!-- <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script> -->
+    <link rel="stylesheet" href="./styles.css" />
+    <title>Form Validation</title>
+  </head>
+  <body>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.5.1/jquery.slim.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.16.1/umd/popper.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/4.6.0/js/bootstrap.min.js"></script>
+    <nav class="navbar navbar-expand-lg navbar-light bg-light static-top">
+      <a class="navbar-brand">FORM VALIDATION</a>
+    </nav>
+    <div class="container bg-dark text-white pt-2 pb-2">
+      <form action="" id="myForm">
+        <div class="form-group">
+          <label for="name-input">Name:</label>
+          <input
+            id="name-input"
+            class="form-control"
+            type="text"
+            name=""
+            placeholder="Enter Name"
+          />
+        </div>
+        <div class="form-group">
+          <label for="email-input">Email:</label>
+          <input
+            id="email-input"
+            class="form-control"
+            type="email"
+            name=""
+            placeholder="Enter Email"
+          />
+        </div>
+        <div class="form-group">
+          <label for="pass-input">Password:</label>
+          <input
+            id="pass-input"
+            class="form-control"
+            type="password"
+            name=""
+            placeholder="Min : 8 Characters"
+          />
+        </div>
+        <div class="form-group">
+          <button class="btn btn-primary submit" type="submit">Submit</button>
+        </div>
+      </form>
+      <p>
+          <h3>Form Conditions:</h3>
+          <ul>
+              <li id='name-condition'>
+                  Name must be atleast 5 characters.
+              </li>
+              <li id='pass-condition'>
+                  Password must match = 'ZH123456'
+              </li>
+              <li id='pass-condition'>Password must me atlest 8 characters</li>
+              <li>
+                  Form will not be submitted on Validation Failure.
+              </li>
+              <li>
+                  Heighlighted input field means errors
+              </li>
+            
+          </ul>
+      </p>
+    </div>
+  </body>
+</html>
