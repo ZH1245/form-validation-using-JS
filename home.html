@@ -15,7 +15,8 @@
     />
     <link rel="stylesheet" href="assets/css/style.css" />
     <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.5.1/jquery.slim.min.js"></script>
-    <script src="script.js"></script>
+    <script src="./script.js"></script>
+    <!-- <script src="./test.js"></script> -->
     <!-- <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script> -->
     <link rel="stylesheet" href="./styles.css" />
     <title>Form Validation</title>
@@ -60,7 +61,17 @@
           />
         </div>
         <div class="form-group">
-          <button class="btn btn-primary submit" type="submit">Submit</button>
+          <label for="confirm_pass-input">Confirm Password:</label>
+          <input
+            id="confirm_pass-input"
+            class="form-control"
+            type="password"
+            name=""
+            placeholder="Min : 8 Characters"
+          />
+        </div>
+        <div class="form-group">
+          <button class="btn btn-primary"id="btn" type="submit">Submit</button>
         </div>
       </form>
       <p>
@@ -69,11 +80,13 @@
               <li id='name-condition'>
                   Name must be atleast 5 characters.
               </li>
-              <li id='pass-condition'>
+              <!-- <li id='pass-condition'>
                   Password must match = 'ZH123456'
-              </li>
+              </li> -->
               <li id='pass-condition'>Password must me atlest 8 characters</li>
-              <li>
+              <li id="conf-pass">Password must match</li>
+              <li id="email-condition">Email Field Empty</li>
+              <li id='form-condition'>
                   Form will not be submitted on Validation Failure.
               </li>
               <li>
