@@ -46,7 +46,7 @@ $(function () {
             password.css("border","none")
             $("#pass-condition").css({"color":"white"})
         }
-        if(password.val()!=confirm_pass.val())
+        if(password.val()!=confirm_pass.val() || confirm_pass.val()=='')
         {
             alert("Confirm Password does not match");
             confirm_pass.css("border","2px solid red")
