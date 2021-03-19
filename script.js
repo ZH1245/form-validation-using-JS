@@ -46,17 +46,27 @@ $(function () {
             password.css("border","none")
             $("#pass-condition").css({"color":"white"})
         }
-        if(password.val()!=confirm_pass.val() || confirm_pass.val()=='')
+        if(password.val()!=confirm_pass.val() || confirm_pass.val()=='' || confirm_pass.val().length<8)
         {
-            alert("Confirm Password does not match");
+            if(confirm_pass.val().length<8)alert("Confirm Password length is less than 8");
+            else if(confirm_pass.val()=='')alert("Confirm Password is empty");
+            else{alert("Confirm Password does not match");}
             confirm_pass.css("border","2px solid red")
             $("#conf-pass").css({"color":"red","transition":"1s"})
             Submit_form=false;
             // return false;
         }
         else{
+            if(confirm_pass.val().length<8)
+            {
+                alert("Confirm Password length is less than 8");
+                confirm_pass.css("border","2px solid red");
+                Submit_form=false;
+            }
+            else{
             confirm_pass.css("border","none")
             $("#conf-pass").css({"color":"white"})
+            }
         }
         if(Submit_form==true)
         {
